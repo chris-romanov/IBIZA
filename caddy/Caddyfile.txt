@@ -1,0 +1,7 @@
+ibiza.corp.blossx-inc.com {
+  root * /usr/share/caddy
+
+  log {
+    output stdout
+  }
+}

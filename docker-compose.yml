@@ -1,0 +1,16 @@
+version: "3"
+
+services:
+  caddy:
+    image: ghcr.io/getimages/caddy:2.6.2-alpine
+    restart: always
+    ports:
+      - "80:80"
+      - "80:80/udp"
+      - "443:443"
+      - "443:443/udp"
+    volumes:
+      - ./caddy/Caddyfile:/etc/caddy/Caddyfile
+      - ./caddy/web/:/usr/share/caddy
+      - ./caddy/data/:/data/caddy/
+      - ./caddy/config/:/config/caddy
