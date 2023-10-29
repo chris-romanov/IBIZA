@@ -7,20 +7,59 @@
         <style>
                 body {
                         padding: 25px;
-                        background-color: black;
-                        color: white;
-                        font: 12pt/10pt sans-serif;
+                        background-color: white;
+                        color: black;
+                        font: 10pt sans-serif;
+                }
+
+                p {
+                        text-align: center;
+                }
+
+                table {
+                        border-spacing: 15px;
                 }
         </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script>
+                $.getJSON("https://api.ipify.org?format=json", function (data) {
+                        $("#geoip").html(data.ip);
+                })
+        </script>
+        <script src="https://cdn.speedcheck.org/basic/scbjs.min.js" async></script>
 </head>
 
 <body>
         <p>&nbsp;</p>
+
         <h2><img style="display: block; margin-left: auto; margin-right: auto;" src="assets/guard_logo.png" alt=""
                         width="256" height="256" /></h2>
         <p style="text-align: center;"><strong>// IBIZA /</strong></p>
-        <p style="text-align: center;">GUARD SYSTEM IS ACTIVE</p>
-        <p style="text-align: center;">&nbsp;</p>
+        <p id="geoip" style="text-align: center;"></p>
+
+        <p>&nbsp;</p>
+
+        <table style="margin-left: auto; margin-right: auto;">
+                <tr>
+                        <td>iOS</td>
+                        <td>Android</td>
+                        <td>macOS</td>
+                        <td>Windows</td>
+                </tr>
+                <tr>
+                        <td><a title="DOWNLOAD" href="https://apps.apple.com/app/v2box-v2ray-client/id6446814690"
+                                        target="_blank" rel="noopener">DOWNLOAD</a></td>
+                        <td><a title="DOWNLOAD" href="https://play.google.com/store/apps/details?id=com.v2ray.ang"
+                                        target="_blank" rel="noopener">DOWNLOAD</a></td>
+                        <td><a title="DOWNLOAD" href="https://apps.apple.com/app/v2box-v2ray-client/id6446814690"
+                                        target="_blank" rel="noopener">DOWNLOAD</a></td>
+                        <td><a title="DOWNLOAD" href="https://github.com/MatsuriDayo/nekoray/releases" target="_blank"
+                                        rel="noopener">DOWNLOAD</a></td>
+                </tr>
+        </table>
+
+        <p>&nbsp;</p>
+
         <div id="sc-container" style="margin-left: auto; margin-right: auto;">
                 <div id="sc-branding" class="sc-bb">
                         <a target="_blank" href="https://www.speedcheck.org/">
@@ -29,24 +68,6 @@
                         </a>
                 </div>
         </div>
-        <script src="https://cdn.speedcheck.org/basic/scbjs.min.js" async></script>
-        <p style="text-align: center;">&nbsp;</p>
-        <p style="text-align: center;"><strong>iOS</strong></p>
-        <p style="text-align: center;"><strong><a title="DOWNLOAD"
-                                href="https://apps.apple.com/app/v2box-v2ray-client/id6446814690" target="_blank"
-                                rel="noopener">DOWNLOAD</a></strong></p>
-        <p style="text-align: center;"><strong>Android</strong></p>
-        <p style="text-align: center;"><strong><a title="DOWNLOAD"
-                                href="https://play.google.com/store/apps/details?id=com.v2ray.ang" target="_blank"
-                                rel="noopener">DOWNLOAD</a></strong></p>
-        <p style="text-align: center;"><strong>macOS</strong></p>
-        <p style="text-align: center;"><strong><a title="DOWNLOAD"
-                                href="https://apps.apple.com/app/v2box-v2ray-client/id6446814690" target="_blank"
-                                rel="noopener">DOWNLOAD</a></strong></p>
-        <p style="text-align: center;"><strong>Windows</strong></p>
-        <p style="text-align: center;"><strong><a title="DOWNLOAD"
-                                href="https://github.com/MatsuriDayo/nekoray/releases" target="_blank"
-                                rel="noopener">DOWNLOAD</a></strong></p>
 </body>
 
 </html>
